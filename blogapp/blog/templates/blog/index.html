@@ -8,10 +8,22 @@
 {%block title%} Homepage {%endblock%}
 
 {% block content %}
-    <img src="{% static 'img/django.png' %}" alt="" width="200px">
 
-    <h1>Home Page</h1>
+<div class="container">
+    <div class="row">
+        <div class="col-3">
+          {% include 'partials/_categories.html' %}
+        </div>
+        <div class="col-9">
+            <h1>Home page</h1>
+            {% include 'blog/partials/_blog.html' %}
+            {% include 'blog/partials/_blog.html' %}
+            {% include 'blog/partials/_blog.html' %}
+            {% include 'blog/partials/_blog.html' %}
+        </div>
+    </div>
 
+</div>
 
 {% endblock %}
 
