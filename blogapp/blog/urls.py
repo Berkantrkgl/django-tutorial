@@ -14,5 +14,5 @@ urlpatterns = [
     # Garip bir sekilde index'te sonuna ters slash eklemeden kabul ediyor ama
     # blogs kisminda hata veriyor.
     path("blogs/", views.blogs, name="blogs"),
-    path("blogs/<int:id>", views.blog_details, name="blog_details"),
+    path("blogs/<slug:slug>", views.blog_details, name="blog_details"),
 ]
