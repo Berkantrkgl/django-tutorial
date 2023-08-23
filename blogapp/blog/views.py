@@ -3,7 +3,7 @@ from django.http.response import HttpResponse
 from blog.models import Blog, Category
 
 # Create your views here.
-def index(request):
+def index(request):    
     context = {
         "blogs": Blog.objects.filter(is_home = True, is_active = True),
         "categories": Category.objects.all() 
