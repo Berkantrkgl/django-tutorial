@@ -11,8 +11,7 @@ from . import views
 urlpatterns = [
     path("", views.index, name="home"),
     path("index", views.index),
-    # Garip bir sekilde index'te sonuna ters slash eklemeden kabul ediyor ama
-    # blogs kisminda hata veriyor.
+    path("category/<slug:slug>", views.blogs_by_category, name="blogs_by_category"),
     path("blogs/", views.blogs, name="blogs"),
     path("blogs/<slug:slug>", views.blog_details, name="blog_details"),
 ]

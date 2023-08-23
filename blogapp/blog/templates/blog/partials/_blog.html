@@ -9,13 +9,11 @@
             <div class="card-body">
                 <h5 class="card-title">
                     <a href="{% url 'blog_details' blog.slug %}">
-                        {{ blog.title }}    
+                        {{ blog.title|title }}    
                     </a>
                    
                 </h5> 
-                <p class="card-text">
-                    {{blog.description}}
-                </p>
+                <p class="card-text">{{ blog.description|striptags|slice:"0:50" }}</p>
             </div>  
         </div>
 
